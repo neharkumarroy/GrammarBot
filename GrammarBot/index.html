@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GrammarBot helps you clean and correct grammar in paragraphs instantly." />
+  <title>GrammarBot — Chat & Correct Paragraphs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <div class="logo-box">GB</div>
+      <div>
+        <h1>GrammarBot — Clean & Correct Paragraph</h1>
+        <p class="lead">Paste or type a paragraph, click <span class="highlight">Clean & Correct</span>. GrammarBot will fix punctuation, capitalization, spacing and common typos and show suggestions.</p>
+      </div>
+    </header>
+
+    <section class="ad-window" id="adWindow">
+      <button class="close-ad" onclick="document.getElementById('adWindow').style.display='none'">×</button>
+      <p> Your Ad Here — Replace with real content</p>
+    </section>
+
+    <section class="top-bar">
+      <div class="controls">
+        <button id="cleanBtn">Clean & Correct</button>
+        <button id="suggestBtn" class="btn-ghost">Show Suggestions</button>
+        <button id="resetBtn" class="btn-ghost">Reset</button>
+        <button id="copyBtn" class="btn-ghost">Copy Output</button>
+        <button id="downloadBtn" class="btn-ghost">Download .txt</button>
+      </div>
+      <div class="stats small" id="stats" aria-live="polite">Words: 0 · Sentences: 0 · Read: 0 min</div>
+    </section>
+
+    <section class="grid">
+      <div>
+        <label for="input" class="small">Input</label>
+        <textarea id="input" placeholder="Type or paste your paragraph here..."></textarea>
+      </div>
+      <div>
+        <label for="output" class="small">Output</label>
+        <div id="output" class="out" contenteditable="true" aria-label="Corrected paragraph" aria-live="polite"></div>
+        <div class="suggestions" id="suggestions" style="display:none"></div>
+      </div>
+    </section>
+
+    <section class="chat-section">
+      <h2>Chat with GrammarBot</h2>
+      <div id="chatBox" class="chat-box"></div>
+      <div class="chat-input">
+        <input id="chatInput" placeholder="Say hello or ask something..." />
+        <button id="chatSend">Send</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Tip: You can edit the corrected text in the Output box. Click <em>Show Suggestions</em> to see what changed. This runs fully in your browser — nothing is sent to a server.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"> facebook</a>
+        <a href="https://twitter.com" target="_blank"> X</a>
+        <a href="https://instagram.com" target="_blank"> insta</a>
+        <a href="https://linkedin.com" target="_blank"> linkedin</a>
+        <a href="https://github.com" target="_blank"> github</a>
+      </div>
+      <p>© 2025 GrammarBot — Built with HTML, CSS & JS</p>
+    </footer>
+  </main>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <span>We use cookies to enhance your experience. By continuing, you agree to our cookie policy. <a href="/privacy-policy.html">Learn more</a></span>
+    <button id="cookieAccept">Accept</button>
+  </div>
+
+  <noscript>
+    <p>This app requires JavaScript to function properly. Please enable it in your browser settings.</p>
+  </noscript>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
